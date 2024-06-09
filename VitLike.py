@@ -231,7 +231,7 @@ class CnnBlock(nn.Module):
                  groups:int = 1,
                  adapt_size:int = 5
                  ):
-        super().__init__()
+        super(CnnBlock, self).__init__()
         self.reshape = reshape
         self.phw = phw
         self.hidden_size = hidden_size
@@ -328,7 +328,7 @@ class EncHead(nn.Module):
                  dropout:float = 0.1, 
                  act:Optional[nn.Module] = None
                  ):
-        super().__init__()
+        super(EncHead, self).__init__()
         
         heads_layers: OrderedDict[str, nn.Module] = OrderedDict()
         
@@ -368,7 +368,7 @@ class Cnn_Enc(nn.Module):
                  representation_size:int = 1024,
                  num_classes:int = 6
                  ):
-        super().__init__()
+        super(Cnn_Enc, self).__init__()
                 
         self.CNNEnc: Dict[str:nn.Module] = self._makeCNNEnc(block_list=block_list,
                                                             kernel_sizes=kernel_sizes,
@@ -595,7 +595,7 @@ class CnnEncHeadBlock(nn.Module):
                  _priority_type:str = "patch",
                  _recalc:bool = False
                  ):
-        super().__init__()
+        super(CnnEncHeadBlock, self).__init__()
         self._priorty_type = _priority_type
         self.hidden_limit = 512
         self.patch_limit = 24

@@ -1,0 +1,26 @@
+# Ignore Data Files
+/Data
+
+# Ignore Visualizations
+/Vis
+
+# Ignore figures
+/figures
+
+# Ignore best model weights
+/best_models
+
+# Ignore best model weights
+*.PTH
+
+# Ignore pychache
+/__pycache__
+
+# Ignore ipynb
+/.ipynb_checkpoints
+
+# Ignore Submission
+*.csv
+
+# Ignore Sample Submission
+/sample_submissions
